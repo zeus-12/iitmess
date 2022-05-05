@@ -51,7 +51,7 @@ const Menu = ({data}) => {
   data = data[`week${weekNo}`][day];
 
   const menuList = (meal) =>
-    data[meal].map((food) => <li key={food.replaceAll(' ', '')}>{food}</li>);
+    data[meal].map((food) => <li key={food}>{food}</li>);
 
   return (
     <div>
