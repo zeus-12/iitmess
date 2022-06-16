@@ -1,12 +1,12 @@
-const Menu = ({data}) => {
+const Menu = ({ data }) => {
   //2022 may 8 - sunday
   const incrementWeek = (weekNo, diffInWeeks) => {
-    diffInWeeks %= 4;
     weekNo = (weekNo + diffInWeeks) % 4;
+    if (weekNo == 0) return 4;
     return weekNo;
   };
 
-  const startDate = '2022-05-01';
+  const startDate = "2022-05-01";
 
   // const today = '2022-05-23';
 
@@ -15,31 +15,31 @@ const Menu = ({data}) => {
   date.setHours(date.getHours() + 5.5);
 
   let today = date.toISOString().slice(0, 10);
-  const dateSplit = today.split('-');
-  const displayDate = dateSplit[2] + '-' + dateSplit[1] + '-' + dateSplit[0];
+  const dateSplit = today.split("-");
+  const displayDate = dateSplit[2] + "-" + dateSplit[1] + "-" + dateSplit[0];
   // const today = new Date().toISOString().slice(0, 10);
-  let day = 'sunday';
+  let day = "sunday";
   switch (new Date().getDay()) {
     case 0:
-      day = 'sunday';
+      day = "sunday";
       break;
     case 1:
-      day = 'monday';
+      day = "monday";
       break;
     case 2:
-      day = 'tuesday';
+      day = "tuesday";
       break;
     case 3:
-      day = 'wednesday';
+      day = "wednesday";
       break;
     case 4:
-      day = 'thursday';
+      day = "thursday";
       break;
     case 5:
-      day = 'friday';
+      day = "friday";
       break;
     case 6:
-      day = 'saturday';
+      day = "saturday";
   }
 
   let weekNo = 2;
@@ -67,15 +67,15 @@ const Menu = ({data}) => {
       <div className="flex justify-evenly">
         <div>
           <p className="text-orange-200">Breakfast</p>
-          <ul>{menuList('breakfast')}</ul>
+          <ul>{menuList("breakfast")}</ul>
         </div>
         <div>
           <p className="text-green-300">Lunch</p>
-          <ul>{menuList('lunch')}</ul>
+          <ul>{menuList("lunch")}</ul>
         </div>
         <div>
           <p className="text-blue-300">Dinner</p>
-          <ul>{menuList('dinner')}</ul>
+          <ul>{menuList("dinner")}</ul>
         </div>
       </div>
     </div>
