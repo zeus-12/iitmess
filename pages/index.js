@@ -1,14 +1,17 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import Menu from '../components/Menu';
-import menu from '../data';
+import Head from "next/head";
+import Link from "next/link";
+import Menu from "../components/Menu";
+import menu from "../data";
 
 export default function Home() {
   return (
     <div className="">
       <Head>
         <title>IIT-M-ESS</title>
-        <meta name="description" content="Created for the Community" />
+        <meta
+          name="description"
+          content="The one-line answer to the qn 'food entha myre'"
+        />
       </Head>
       <p className="text-center text-2xl ">
         IIT<span className="text-sky-400">M</span>ESS
@@ -32,10 +35,11 @@ export default function Home() {
           the whole North Mess
         </p> */}
         <p className="text-center block">
-          Contribute/Report Menu changes on{' '}
+          Contribute/Report Menu changes on{" "}
           <a
             className="text-blue-200"
-            href="https://github.com/zeus-12/iitmess">
+            href="https://github.com/zeus-12/iitmess"
+          >
             Github
           </a>
         </p>
