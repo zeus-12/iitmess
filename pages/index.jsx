@@ -13,7 +13,7 @@ export default function Home({ displayDate, weekNo, day }) {
         />
       </Head>
 
-      <p className="text-center text-2xl ">
+      <p className="text-center text-4xl font-semibold tracking-tight">
         IIT<span className="text-sky-400">M</span>ESS
       </p>
       <div className="flex justify-evenly py-2">
@@ -28,7 +28,7 @@ export default function Home({ displayDate, weekNo, day }) {
       <div className="space-y-8">
         {Object.keys(menu)?.map((item) => (
           <div key={item}>
-            <p className="text-xl text-center text-orange-400 ">
+            <p className="text-xl text-center text-orange-400 font-semibold">
               <span className="capitalize">{item.split("mess")[0]}</span> Mess
             </p>
 
