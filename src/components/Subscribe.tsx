@@ -10,24 +10,40 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 
 const Subscribe = () => {
   const [email, setEmail] = useState("");
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleSubscribe = async () => {
+    setLoading(true);
     if (!email || !email.includes("@") || !email.includes(".")) {
-      setError(true);
+      setError("Invalid email address");
       return;
     }
-    await fetch("/api/subscribe", {
-      method: "POST",
-      body: JSON.stringify({ email }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    try {
+      await fetch("/api/subscribe", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      setSuccess(true);
+      setLoading(false);
+      toast({
+        title: "Subscribed!",
+        description: "Succesfully subscribed to the daily mess menu.",
+      });
+    } catch (error: any) {
+      setError(error?.message || "Something went wrong");
+      setLoading(false);
+    }
   };
 
   return (
@@ -53,7 +69,7 @@ const Subscribe = () => {
               required
               value={email}
               onChange={(e) => {
-                setError(false);
+                setError("");
                 setEmail(e.target.value);
               }}
               placeholder="name@example.com"
@@ -61,11 +77,7 @@ const Subscribe = () => {
             />
 
             <div className="h-1 col-span-3 text-end ml-auto">
-              {error && (
-                <p className="text-red-500 text-sm text-center">
-                  Please enter a valid email address.
-                </p>
-              )}
+              <p className="text-red-500 text-sm text-center">{error}</p>
             </div>
           </div>
         </div>
