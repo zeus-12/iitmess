@@ -1,15 +1,8 @@
-import Head from "next/head";
-import Menu from "../components/Menu";
-import Subscribe from "@/components/Subscribe";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { Badge } from "@/components/ui/badge";
-// import * as menu from "../../data.json";
-
-const menu = {
-  southmess: {
-    week1: {
-      sunday: {
-        breakfast: [
+{
+  "southmess": {
+    "week1": {
+      "sunday": {
+        "breakfast": [
           "Dosa & Masala",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -17,18 +10,18 @@ const menu = {
           "Coconut Chutney",
           "Sambar",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Veg Biryani (Basmati)",
           "Chapathi",
           "Kadadi Paneer",
           "Boondi Raita",
           "Papad",
           "Gulab Jamun",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Pepper Rasam",
           "Phulka",
@@ -38,11 +31,11 @@ const menu = {
           "Masala Papad",
           "Lemon Pickle",
           "Butter Milk",
-          "Pineapple",
-        ],
+          "Pineapple"
+        ]
       },
-      monday: {
-        breakfast: [
+      "monday": {
+        "breakfast": [
           "Idly & Vada",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -51,9 +44,9 @@ const menu = {
           "Sambar",
           "Sprouts",
           "Mixed Fruit Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Garlic Rasam",
           "Phulka",
@@ -62,9 +55,9 @@ const menu = {
           "Brinjal Fry",
           "Fryums",
           "Ginger Thovaiyal",
-          "Lemon Pickel",
+          "Lemon Pickel"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Lemon Rasam",
           "Phulka",
@@ -73,11 +66,11 @@ const menu = {
           "Vatthal",
           "Lemon Pickel",
           "Butter Milk",
-          "Banana",
-        ],
+          "Banana"
+        ]
       },
-      tuesday: {
-        breakfast: [
+      "tuesday": {
+        "breakfast": [
           "Puttu & Kadala Curry",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -86,9 +79,9 @@ const menu = {
           "Rava Khichidi",
           "Coconut Chutney",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Lemon Rasam",
           "Chapathi",
@@ -97,9 +90,9 @@ const menu = {
           "Crispy Onion Pakoda",
           "Masala Papad",
           "Tomato Thovaiyal",
-          "Mix Veg Pickle",
+          "Mix Veg Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "Alu Paratha",
@@ -107,11 +100,11 @@ const menu = {
           "Papad",
           "Lemon Pickle",
           "Lemon Juice",
-          "Rava Keshari",
-        ],
+          "Rava Keshari"
+        ]
       },
-      wednesday: {
-        breakfast: [
+      "wednesday": {
+        "breakfast": [
           "Onion Uthapam",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -120,9 +113,9 @@ const menu = {
           "Groundnut Chutney",
           "Sambar",
           "Mixed Fruit Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Tomato Rasam",
           "Phulka",
@@ -131,9 +124,9 @@ const menu = {
           "Bottle Gourd Kottu",
           "Vatthal",
           "Mint Thovaiyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Veg Fried Rice",
           "Chapathi",
           "Dal Fry",
@@ -141,11 +134,11 @@ const menu = {
           "Fryums",
           "Mix Veg Pickle",
           "Butter Milk",
-          "Water Melon",
-        ],
+          "Water Melon"
+        ]
       },
-      thursday: {
-        breakfast: [
+      "thursday": {
+        "breakfast": [
           "Pesarattu & Upma",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -153,9 +146,9 @@ const menu = {
           "Ginger Chutney",
           "Sambar",
           "Mango Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Pepper Rasam",
           "Chapathi",
@@ -164,9 +157,9 @@ const menu = {
           "Gobi 65",
           "Masala Papad",
           "Curry Leaves Thovaiyal",
-          "Gongura Pickel",
+          "Gongura Pickel"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "Ragi Dosa",
@@ -176,11 +169,11 @@ const menu = {
           "Papad",
           "Lemon Pickle",
           "Lemon Juice",
-          "Papaya",
-        ],
+          "Papaya"
+        ]
       },
-      friday: {
-        breakfast: [
+      "friday": {
+        "breakfast": [
           "Pongal & Vada",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -188,9 +181,9 @@ const menu = {
           "Coconut Chutney",
           "Sambar",
           "Mango Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Tomato Rasam",
           "Phulka",
@@ -199,9 +192,9 @@ const menu = {
           "Ridge Gourd",
           "Fryums",
           "Tomato Thovaiyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "Uthapam",
@@ -210,11 +203,11 @@ const menu = {
           "Carrot Beans Cabbage Poriyal",
           "Fryums",
           "Mango Pickle",
-          "Lemon Juice",
-        ],
+          "Lemon Juice"
+        ]
       },
-      saturday: {
-        breakfast: [
+      "saturday": {
+        "breakfast": [
           "Poori",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -222,9 +215,9 @@ const menu = {
           "Aloo Masala",
           "Boiled Chana Sprouts",
           "Mixed Fruit Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Lemon Rasam",
           "Chapathi",
@@ -233,22 +226,22 @@ const menu = {
           "Keerai Vada",
           "Papad",
           "Mint Thovaiyal",
-          "Mix Veg Pickle",
+          "Mix Veg Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Sambar Rice",
           "Puliogare",
           "Curd Rice",
           "Potato Chips",
           "Pickle",
           "Boost",
-          "Yellow Banana",
-        ],
-      },
+          "Yellow Banana"
+        ]
+      }
     },
-    week2: {
-      sunday: {
-        breakfast: [
+    "week2": {
+      "sunday": {
+        "breakfast": [
           "Poha",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -257,29 +250,29 @@ const menu = {
           "Sambar",
           "Peanut Sundal",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Veg Biryani(Basmati)",
           "Phulka",
           "Paneer Butter Masala",
           "Raita",
           "Papad",
           "Mysore Pak",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rice",
           "Bhatura",
           "Chole Masala",
           "Fryums",
           "Mango Pickle",
-          "Lemon Juice",
-        ],
+          "Lemon Juice"
+        ]
       },
-      monday: {
-        breakfast: [
+      "monday": {
+        "breakfast": [
           "Rava Idly",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -288,9 +281,9 @@ const menu = {
           "Coconut Chutney",
           "Sambar",
           "Mixed Fruid Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Garlic Rasam",
           "Chapathi",
@@ -299,9 +292,9 @@ const menu = {
           "Beetroot Poriyal",
           "Fryums",
           "Gonguar Thoviyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Lemon Rasam",
           "Tea, Coffee, Milk",
@@ -314,18 +307,18 @@ const menu = {
           "Vatthal",
           "Lemon Pickle",
           "Butter Milk",
-          "Papaya",
-        ],
+          "Papaya"
+        ]
       },
-      tuesday: {
-        breakfast: [
+      "tuesday": {
+        "breakfast": [
           "Rava Dosa",
           "Kara Chutney",
           "Sambar",
           "Mixed Fruit Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Lemon Rasam",
           "Phulka",
@@ -334,9 +327,9 @@ const menu = {
           "Aloo Kara Poriyal",
           "Masala Papad",
           "Mint Thovaiyal",
-          "Mix Veg Pickel",
+          "Mix Veg Pickel"
         ],
-        dinner: [
+        "dinner": [
           "Jeera Rice",
           "Chapathi",
           "Paneer Mutter Masala",
@@ -344,11 +337,11 @@ const menu = {
           "Fryums",
           "Mix Veg Pickle",
           "Butter Milk",
-          "Pineapple",
-        ],
+          "Pineapple"
+        ]
       },
-      wednesday: {
-        breakfast: [
+      "wednesday": {
+        "breakfast": [
           "Maggi",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -358,9 +351,9 @@ const menu = {
           "Tomato Ketchup",
           "Ragi Koozh",
           "Mixed Fruit Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Tomato Rasa,",
           "Chapathi",
@@ -369,9 +362,9 @@ const menu = {
           "Tindly fry",
           "Vatthal",
           "Ridge Gourd Thoviyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "PLain Dosa",
@@ -380,11 +373,11 @@ const menu = {
           "Papad",
           "Lemon Pickle",
           "Lemon Juice",
-          "Double Ka Meetha",
-        ],
+          "Double Ka Meetha"
+        ]
       },
-      thursday: {
-        breakfast: [
+      "thursday": {
+        "breakfast": [
           "Pongal & Vada",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -394,9 +387,9 @@ const menu = {
           "Sambar",
           "Mixed Sprouts",
           "Pineaple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Pepper Rasam",
           "Phulka",
@@ -405,9 +398,9 @@ const menu = {
           "Carrot Beans Poriyal",
           "Papad",
           "Curry Leaves Thovaiyal",
-          "Gongura Pickle",
+          "Gongura Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Pepper Rasam",
           "Chapathi",
@@ -416,11 +409,11 @@ const menu = {
           "Masala Papad",
           "Lemon Pickle",
           "Butter Milk",
-          "Seasonal Fruit",
-        ],
+          "Seasonal Fruit"
+        ]
       },
-      friday: {
-        breakfast: [
+      "friday": {
+        "breakfast": [
           "Poori",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -429,9 +422,9 @@ const menu = {
           "Aloo Masala",
           "Boiled Chana Sprouts",
           "Mango Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Tomato Rasam",
           "Chapathi",
@@ -440,9 +433,9 @@ const menu = {
           "Bhindi Dry",
           "Fryums",
           "Gongura Thoviyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "Millet Dosa",
@@ -451,11 +444,11 @@ const menu = {
           "Papad",
           "Lemon Pickle",
           "Lemon Juice",
-          "Water Melon",
-        ],
+          "Water Melon"
+        ]
       },
-      saturday: {
-        breakfast: [
+      "saturday": {
+        "breakfast": [
           "Kal Dosa",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -465,9 +458,9 @@ const menu = {
           "Vada Curry",
           "Boiled Moong Sprout",
           "Mango Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Lemon Rasam",
           "Phulka",
@@ -476,22 +469,22 @@ const menu = {
           "Beans & Aloo Poriyal",
           "Masala Papad",
           "Curry Leaves Thovaiyal",
-          "Mix Veg Pickel",
+          "Mix Veg Pickel"
         ],
-        dinner: [
+        "dinner": [
           "Sambar Rice",
           "Tomato Rice",
           "Curd Rice",
           "Potato Chips",
           "Pickle",
           "Boost",
-          "Banana",
-        ],
-      },
+          "Banana"
+        ]
+      }
     },
-    week3: {
-      sunday: {
-        breakfast: [
+    "week3": {
+      "sunday": {
+        "breakfast": [
           "Idiyappam",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -500,18 +493,18 @@ const menu = {
           "Coconut Chutney",
           "Veg Kuruma",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Veg Biryani (Basmati)",
           "Chapathi",
           "Kadadi Paneer",
           "Boondi Raita",
           "Papad",
           "Ice cream",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Pepper Rasam",
           "Phulka",
@@ -521,11 +514,11 @@ const menu = {
           "Masala Papad",
           "Lemon Pickle",
           "Butter Milk",
-          "Pineapple",
-        ],
+          "Pineapple"
+        ]
       },
-      monday: {
-        breakfast: [
+      "monday": {
+        "breakfast": [
           "Idly & Vada",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -535,9 +528,9 @@ const menu = {
           "Sambar",
           "Sprouts",
           "Mixed Fruit Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Garlic Rasam",
           "Phulka",
@@ -546,9 +539,9 @@ const menu = {
           "Brinjal MoChhe",
           "Fryums",
           "Ginger Thovaiyal",
-          "Lemon Pickel",
+          "Lemon Pickel"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Lemon Rasam",
           "Phulka",
@@ -557,11 +550,11 @@ const menu = {
           "Vatthal",
           "Lemon Pickel",
           "Butter Milk",
-          "Banana",
-        ],
+          "Banana"
+        ]
       },
-      tuesday: {
-        breakfast: [
+      "tuesday": {
+        "breakfast": [
           "Puttu & Kadala Curry",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -570,9 +563,9 @@ const menu = {
           "Rava Khichidi",
           "Coconut Chutney",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Lemon Rasam",
           "Chapathi",
@@ -581,9 +574,9 @@ const menu = {
           "Bitter Gourd 65",
           "Masala Papad",
           "Tomato Thovaiyal",
-          "Mix Veg Pickle",
+          "Mix Veg Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "Gobi Paratha",
@@ -591,11 +584,11 @@ const menu = {
           "Papad",
           "Lemon Pickle",
           "Lemon Juice",
-          "Pineapple Keshari",
-        ],
+          "Pineapple Keshari"
+        ]
       },
-      wednesday: {
-        breakfast: [
+      "wednesday": {
+        "breakfast": [
           "Onion Uthapam",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -604,9 +597,9 @@ const menu = {
           "Groundnut Chutney",
           "Sambar",
           "Mixed Fruit Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Tomato Rasam",
           "Phulka",
@@ -615,9 +608,9 @@ const menu = {
           "Bottle Gourd Kottu",
           "Vatthal",
           "Mint Thovaiyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Veg Fried Rice",
           "Chapathi",
           "Dal Fry",
@@ -625,11 +618,11 @@ const menu = {
           "Fryums",
           "Mix Veg Pickle",
           "Butter Milk",
-          "Water Melon",
-        ],
+          "Water Melon"
+        ]
       },
-      thursday: {
-        breakfast: [
+      "thursday": {
+        "breakfast": [
           "Pesarattu & Upma",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -638,9 +631,9 @@ const menu = {
           "Ginger Chutney",
           "Sambar",
           "Mango Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Pepper Rasam",
           "Chapathi",
@@ -649,9 +642,9 @@ const menu = {
           "Bhindi Fry",
           "Masala Papad",
           "Curry Leaves Thovaiyal",
-          "Gongura Pickel",
+          "Gongura Pickel"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "Rava Idly",
@@ -661,11 +654,11 @@ const menu = {
           "Papad",
           "Lemon Pickle",
           "Lemon Juice",
-          "Papaya",
-        ],
+          "Papaya"
+        ]
       },
-      friday: {
-        breakfast: [
+      "friday": {
+        "breakfast": [
           "Pongal & Vada",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -674,9 +667,9 @@ const menu = {
           "Coconut Chutney",
           "Sambar",
           "Mango Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Tomato Rasam",
           "Phulka",
@@ -685,9 +678,9 @@ const menu = {
           "Keerai Beetroot Poriyal",
           "Fryums",
           "Tomato Thovaiyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "Uthapam",
@@ -696,11 +689,11 @@ const menu = {
           "Carrot Beans Cabbage Poriyal",
           "Fryums",
           "Mango Pickle",
-          "Lemon Juice",
-        ],
+          "Lemon Juice"
+        ]
       },
-      saturday: {
-        breakfast: [
+      "saturday": {
+        "breakfast": [
           "Poori",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -709,9 +702,9 @@ const menu = {
           "Aloo Masala",
           "Boiled Chana Sprouts",
           "Mixed Fruit Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Lemon Rasam",
           "Chapathi",
@@ -720,22 +713,22 @@ const menu = {
           "Keerai Vada",
           "Papad",
           "Mint Thovaiyal",
-          "Mix Veg Pickle",
+          "Mix Veg Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Sambar Rice",
           "Gongura Rice",
           "Curd Rice",
           "Potato Chips",
           "Pickle",
           "Boost",
-          "Yellow Banana",
-        ],
-      },
+          "Yellow Banana"
+        ]
+      }
     },
-    week4: {
-      sunday: {
-        breakfast: [
+    "week4": {
+      "sunday": {
+        "breakfast": [
           "Seviya Upma",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -745,29 +738,29 @@ const menu = {
           "Sambar",
           "Peanut Sundal",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Veg Biryani(Basmati)",
           "Phulka",
           "Paneer Butter Masala",
           "Raita",
           "Papad",
           "Payasam",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rice",
           "Bhatura",
           "Chole Masala",
           "Fryums",
           "Mango Pickle",
-          "Lemon Juice",
-        ],
+          "Lemon Juice"
+        ]
       },
-      monday: {
-        breakfast: [
+      "monday": {
+        "breakfast": [
           "Idly & Vada",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -776,9 +769,9 @@ const menu = {
           "Coconut Chutney",
           "Sambar",
           "Mixed Fruid Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Garlic Rasam",
           "Chapathi",
@@ -787,9 +780,9 @@ const menu = {
           "Beetroot Poriyal",
           "Fryums",
           "Gonguar Thoviyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Lemon Rasam",
           "Phulka",
@@ -798,11 +791,11 @@ const menu = {
           "Vatthal",
           "Lemon Pickle",
           "Butter Milk",
-          "Papaya",
-        ],
+          "Papaya"
+        ]
       },
-      tuesday: {
-        breakfast: [
+      "tuesday": {
+        "breakfast": [
           "Rava Dosa",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -811,9 +804,9 @@ const menu = {
           "Kara Chutney",
           "Sambar",
           "Mixed Fruit Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Lemon Rasam",
           "Phulka",
@@ -822,9 +815,9 @@ const menu = {
           "Aloo Kara Poriyal",
           "Masala Papad",
           "Mint Thovaiyal",
-          "Mix Veg Pickel",
+          "Mix Veg Pickel"
         ],
-        dinner: [
+        "dinner": [
           "Jeera Rice",
           "Chapathi",
           "Paneer Mutter Masala",
@@ -832,11 +825,11 @@ const menu = {
           "Fryums",
           "Mix Veg Pickle",
           "Butter Milk",
-          "Pineapple",
-        ],
+          "Pineapple"
+        ]
       },
-      wednesday: {
-        breakfast: [
+      "wednesday": {
+        "breakfast": [
           "Maggi",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -846,9 +839,9 @@ const menu = {
           "Tomato Ketchup",
           "Ragi Koozh",
           "Mixed Fruit Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Tomato Rasa,",
           "Chapathi",
@@ -857,9 +850,9 @@ const menu = {
           "Tindly fry",
           "Vatthal",
           "Ridge Gourd Thoviyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "Idly",
@@ -868,11 +861,11 @@ const menu = {
           "Papad",
           "Lemon Pickle",
           "Lemon Juice",
-          "Carrot Halwa",
-        ],
+          "Carrot Halwa"
+        ]
       },
-      thursday: {
-        breakfast: [
+      "thursday": {
+        "breakfast": [
           "Pongal & Vada",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -882,9 +875,9 @@ const menu = {
           "Sambar",
           "Mixed Sprouts",
           "Pineaple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Pepper Rasam",
           "Phulka",
@@ -893,9 +886,9 @@ const menu = {
           "Carrot Beans Poriyal",
           "Papad",
           "Curry Leaves Thovaiyal",
-          "Gongura Pickle",
+          "Gongura Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Pepper Rasam",
           "Chapathi",
@@ -904,11 +897,11 @@ const menu = {
           "Masala Papad",
           "Lemon Pickle",
           "Butter Milk",
-          "Seasonal Fruit",
-        ],
+          "Seasonal Fruit"
+        ]
       },
-      friday: {
-        breakfast: [
+      "friday": {
+        "breakfast": [
           "Poori",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -917,9 +910,9 @@ const menu = {
           "Aloo Masala",
           "Boiled Chana Sprouts",
           "Mango Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Tomato Rasam",
           "Chapathi",
@@ -928,9 +921,9 @@ const menu = {
           "Bhindi Dry",
           "Fryums",
           "Gongura Thoviyal",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Tomato Rasam",
           "Kerala Parota",
@@ -939,11 +932,11 @@ const menu = {
           "Papad",
           "Lemon Pickle",
           "Lemon Juice",
-          "Water Melon",
-        ],
+          "Water Melon"
+        ]
       },
-      saturday: {
-        breakfast: [
+      "saturday": {
+        "breakfast": [
           "Kal Dosa",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -953,9 +946,9 @@ const menu = {
           "Vada Curry",
           "Boiled Moong Sprout",
           "Mango Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Lemon Rasam",
           "Phulka",
@@ -964,25 +957,25 @@ const menu = {
           "Beans & Aloo Poriyal",
           "Masala Papad",
           "Curry Leaves Thovaiyal",
-          "Mix Veg Pickel",
+          "Mix Veg Pickel"
         ],
-        dinner: [
+        "dinner": [
           "Sambar Rice",
           "Coconut Rice",
           "Curd Rice",
           "Potato Chips",
           "Pickle",
           "Boost",
-          "Banana",
-        ],
-      },
-    },
+          "Banana"
+        ]
+      }
+    }
   },
 
-  northmess: {
-    week1: {
-      sunday: {
-        breakfast: [
+  "northmess": {
+    "week1": {
+      "sunday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -991,9 +984,9 @@ const menu = {
           "Green Chutney & Sauce",
           "Boiled Black Chana Sprouts",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Veg Biryani (Basmati)",
           "Phulka",
           "Dal Fry",
@@ -1002,9 +995,9 @@ const menu = {
           "Boondi Raita",
           "Fryums",
           "Mixed Salad",
-          "Mixed Veg Pickle",
+          "Mixed Veg Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Bhatura",
           "Chole",
@@ -1012,11 +1005,11 @@ const menu = {
           "Masala Pappad",
           "Salad",
           "Mango Pickle",
-          "Seasonal Fruit",
-        ],
+          "Seasonal Fruit"
+        ]
       },
-      monday: {
-        breakfast: [
+      "monday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1024,9 +1017,9 @@ const menu = {
           "Coconut chutney",
           "Green Mong Sprouts",
           "Mango Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal Tadka",
           "Phulka",
@@ -1035,9 +1028,9 @@ const menu = {
           "Curd",
           "papad",
           "Salad",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Mixed veg fried rice",
           "Methi chappathi",
           "Mix veg Manchurian",
@@ -1045,11 +1038,11 @@ const menu = {
           "Fryums",
           "Salad",
           "Mix veg Pickle",
-          "Banana",
-        ],
+          "Banana"
+        ]
       },
-      tuesday: {
-        breakfast: [
+      "tuesday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1058,9 +1051,9 @@ const menu = {
           "Jalebi",
           "Tamrind Chutney",
           "Mx-Frt Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Rajmal Dal",
           "Phulka",
@@ -1069,9 +1062,9 @@ const menu = {
           "Lassi",
           "Fryums",
           "Salad",
-          "Pickle",
+          "Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Phulka",
           "Alooo Bhindi Bhujiya",
@@ -1079,11 +1072,11 @@ const menu = {
           "Papad",
           "Salad",
           "Pickle",
-          "Pineapple Keshari",
-        ],
+          "Pineapple Keshari"
+        ]
       },
-      wednesday: {
-        breakfast: [
+      "wednesday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1092,9 +1085,9 @@ const menu = {
           "Daliya",
           "Black chana sprout",
           "Pineapple Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Peas Pulao",
           "Chappathi",
           "Dal Fry",
@@ -1103,9 +1096,9 @@ const menu = {
           "Curd",
           "Masla Pappad",
           "salad",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Mixed veg paratha",
           "Green chutney&curd",
@@ -1113,11 +1106,11 @@ const menu = {
           "Papad",
           "salad",
           "Lemon Pickle",
-          "Water Melon",
-        ],
+          "Water Melon"
+        ]
       },
-      thursday: {
-        breakfast: [
+      "thursday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1127,9 +1120,9 @@ const menu = {
           "mixed veg uthappam",
 
           "strawberry Jam",
-          "Boiled egg",
+          "Boiled egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Green moong dal",
           "Pulka",
@@ -1138,9 +1131,9 @@ const menu = {
           "Curd",
           "Fryums",
           "Mixed salad",
-          "Mixed Veg pickle",
+          "Mixed Veg pickle"
         ],
-        dinner: [
+        "dinner": [
           "Ghee Rice",
           "Phulka",
           "Moong Dal",
@@ -1148,11 +1141,11 @@ const menu = {
           "Fryums",
           "Salad",
           "Mix veg pickle",
-          "Moong Dal halwa",
-        ],
+          "Moong Dal halwa"
+        ]
       },
-      friday: {
-        breakfast: [
+      "friday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1161,9 +1154,9 @@ const menu = {
           "Idly + Vada",
           "Boiled Moong sprout",
           "Mango Jam",
-          "B.egg",
+          "B.egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal tadka",
           "Phulka",
@@ -1172,9 +1165,9 @@ const menu = {
           "Curd",
           "Papad",
           "Salad",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Raw Banana Karamani",
           "Phulka",
@@ -1182,11 +1175,11 @@ const menu = {
           "Masala Papad",
           "Salad",
           "Musk melon",
-          "Mango Pickle",
-        ],
+          "Mango Pickle"
+        ]
       },
-      saturday: {
-        breakfast: [
+      "saturday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1195,9 +1188,9 @@ const menu = {
           "Aloo masala",
           "Sambar & Chutney",
           "Mx frt Jam",
-          "B.egg",
+          "B.egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal Makhani",
           "Chapathi",
@@ -1206,22 +1199,22 @@ const menu = {
           "Curd",
           "Papad",
           "Salad",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Phulka",
           "Tava mix veg dry",
           "Palak dal",
           "Papd",
           "Salad",
-          "Banana + Bourn vita",
-        ],
-      },
+          "Banana + Bourn vita"
+        ]
+      }
     },
-    week2: {
-      sunday: {
-        breakfast: [
+    "week2": {
+      "sunday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -1230,9 +1223,9 @@ const menu = {
           "Green Chutney & Sauce",
           "Boiled Black Chana Sprouts",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Kasmiri Pulao",
           "Phulka",
           "Dal Fry",
@@ -1241,9 +1234,9 @@ const menu = {
           "Mixed veg Raita",
           "Fryums",
           "Mixed Salad",
-          "Mixed Veg Pickle",
+          "Mixed Veg Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Chappathi",
           "Bhindi fry",
@@ -1251,11 +1244,11 @@ const menu = {
           "Masala Pappad",
           "Salad",
           "Mango Pickle",
-          "Seasonal Fruit",
-        ],
+          "Seasonal Fruit"
+        ]
       },
-      monday: {
-        breakfast: [
+      "monday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1263,9 +1256,9 @@ const menu = {
           "Tomato chutney",
           "Green Mong Sprouts",
           "Mango Jam",
-          "B.egg",
+          "B.egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal palak",
           "Phulka",
@@ -1274,9 +1267,9 @@ const menu = {
           "Curd",
           "papad",
           "Salad",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "rice",
           "Phulka",
           "Mix veg Phuket",
@@ -1284,11 +1277,11 @@ const menu = {
           "Fryums",
           "Salad",
           "Mix veg Pickle",
-          "Banana",
-        ],
+          "Banana"
+        ]
       },
-      tuesday: {
-        breakfast: [
+      "tuesday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1297,9 +1290,9 @@ const menu = {
           "Jalebi",
           "Tamrind Chutney",
           "Mx-Frt Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal Makhani",
           "Phulka",
@@ -1308,9 +1301,9 @@ const menu = {
           "Lassi",
           "Fryums",
           "Salad",
-          "Pickle",
+          "Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Phulka",
           "Mutter Paneer",
@@ -1318,11 +1311,11 @@ const menu = {
           "Papad",
           "Salad",
           "Pickle",
-          "Sabudana kheer(Payasam)",
-        ],
+          "Sabudana kheer(Payasam)"
+        ]
       },
-      wednesday: {
-        breakfast: [
+      "wednesday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "oatmeal",
@@ -1330,9 +1323,9 @@ const menu = {
           "Maggi dry",
           "white chana chaat",
           "strawberry Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Peas Pulao",
           "Chappathi",
           "Dal Panchranga",
@@ -1341,9 +1334,9 @@ const menu = {
           "Curd",
           "Masla Pappad",
           "salad",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Aloo paratha",
           "Green chutney&curd",
@@ -1351,11 +1344,11 @@ const menu = {
           "Papad",
           "salad",
           "Lemon Pickle",
-          "Musk Melon",
-        ],
+          "Musk Melon"
+        ]
       },
-      thursday: {
-        breakfast: [
+      "thursday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -1363,9 +1356,9 @@ const menu = {
           "Lemon and Onion",
           "Pav Bhaji",
           "Pineapple Jam",
-          "Boiled egg",
+          "Boiled egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Mixed dal",
           "Pulka",
@@ -1374,9 +1367,9 @@ const menu = {
           "Curd",
           "Fryums",
           "Mixed salad",
-          "Mixed Veg pickle",
+          "Mixed Veg pickle"
         ],
-        dinner: [
+        "dinner": [
           "Ghee Rice",
           "Phulka",
           "Moong Dal",
@@ -1384,11 +1377,11 @@ const menu = {
           "Fryums",
           "Salad",
           "Mix veg pickle",
-          "Papaya",
-        ],
+          "Papaya"
+        ]
       },
-      friday: {
-        breakfast: [
+      "friday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1396,9 +1389,9 @@ const menu = {
           "Kachori",
           "Boiled Moong sprout",
           "Mango Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Moong Dal",
           "Phulka",
@@ -1407,9 +1400,9 @@ const menu = {
           "Curd",
           "Papad",
           "Salad",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Raw Banana Karamani",
           "Phulka",
@@ -1417,11 +1410,11 @@ const menu = {
           "Masala Papad",
           "Salad",
           "Water melon",
-          "Mango Pickle",
-        ],
+          "Mango Pickle"
+        ]
       },
-      saturday: {
-        breakfast: [
+      "saturday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1429,9 +1422,9 @@ const menu = {
           "Poori",
           "Chole",
           "Mx frt Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Moong Dal Khichdi",
           "Chapathi",
@@ -1440,9 +1433,9 @@ const menu = {
           "Curd",
           "Papad",
           "Salad",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Jeera Rice",
           "Chappathi",
           "Tava mix veg dry",
@@ -1450,13 +1443,13 @@ const menu = {
           "Papad",
           "Salad",
           "Lemon Pickle",
-          "Banana + Boost",
-        ],
-      },
+          "Banana + Boost"
+        ]
+      }
     },
-    week3: {
-      sunday: {
-        breakfast: [
+    "week3": {
+      "sunday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -1465,9 +1458,9 @@ const menu = {
           "Green Chutney & Sauce",
           "Boiled Black Chana Sprouts",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Veg Biryani (Basmati)",
           "Phulka",
           "Dal Fry",
@@ -1476,9 +1469,9 @@ const menu = {
           "Boondi Raita",
           "Fryums",
           "Mixed Salad",
-          "Mixed Veg Pickle",
+          "Mixed Veg Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Mehti Poori",
           "Aloo Dum",
@@ -1486,11 +1479,11 @@ const menu = {
           "Masala Pappad",
           "Salad",
           "Mango Pickle",
-          "Seasonal Fruit",
-        ],
+          "Seasonal Fruit"
+        ]
       },
-      monday: {
-        breakfast: [
+      "monday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1498,9 +1491,9 @@ const menu = {
           "Coconut chutney",
           "Green Mong Sprouts",
           "Mango Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal Tadka",
           "Phulka",
@@ -1509,9 +1502,9 @@ const menu = {
           "Curd",
           "papad",
           "Salad",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Mixed veg fried rice",
           "Methi chappathi",
           "Gobi Manchurian",
@@ -1519,11 +1512,11 @@ const menu = {
           "Fryums",
           "Salad",
           "Mix veg Pickle",
-          "Banana",
-        ],
+          "Banana"
+        ]
       },
-      tuesday: {
-        breakfast: [
+      "tuesday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1532,9 +1525,9 @@ const menu = {
           "Jalebi",
           "Tamrind Chutney",
           "Mx-Frt Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Rajmal Dal",
           "Phulka",
@@ -1543,9 +1536,9 @@ const menu = {
           "Lassi",
           "Fryums",
           "Salad",
-          "Pickle",
+          "Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Phulka",
           "Alooo Bhindi Bhujiya",
@@ -1553,11 +1546,11 @@ const menu = {
           "Papad",
           "Salad",
           "Pickle",
-          "Kheer",
-        ],
+          "Kheer"
+        ]
       },
-      wednesday: {
-        breakfast: [
+      "wednesday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1565,9 +1558,9 @@ const menu = {
           "Macroni",
           "Black chana sprout",
           "Pineapple Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Peas Pulao",
           "Chappathi",
           "Dal Fry",
@@ -1576,9 +1569,9 @@ const menu = {
           "Curd",
           "Masla Pappad",
           "salad",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Mixed veg paratha",
           "Green chutney&curd",
@@ -1586,11 +1579,11 @@ const menu = {
           "Papad",
           "salad",
           "Lemon Pickle",
-          "Water Melon",
-        ],
+          "Water Melon"
+        ]
       },
-      thursday: {
-        breakfast: [
+      "thursday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1600,9 +1593,9 @@ const menu = {
           "mixed veg uthappam",
 
           "strawberry Jam",
-          "Boiled egg",
+          "Boiled egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Green moong dal",
           "Pulka",
@@ -1611,9 +1604,9 @@ const menu = {
           "Curd",
           "Fryums",
           "Mixed salad",
-          "Mixed Veg pickle",
+          "Mixed Veg pickle"
         ],
-        dinner: [
+        "dinner": [
           "Ghee Rice",
           "Phulka",
           "Moong Dal",
@@ -1621,11 +1614,11 @@ const menu = {
           "Fryums",
           "Salad",
           "Mix veg pickle",
-          "Parapu Payasam",
-        ],
+          "Parapu Payasam"
+        ]
       },
-      friday: {
-        breakfast: [
+      "friday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1634,9 +1627,9 @@ const menu = {
           "Idly + Vada",
           "Boiled Moong sprout",
           "Mango Jam",
-          "B.egg",
+          "B.egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal tadka",
           "Phulka",
@@ -1645,9 +1638,9 @@ const menu = {
           "Curd",
           "Papad",
           "Salad",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Raw Banana Karamani",
           "Phulka",
@@ -1655,11 +1648,11 @@ const menu = {
           "Masala Papad",
           "Salad",
           "Musk melon",
-          "Mango Pickle",
-        ],
+          "Mango Pickle"
+        ]
       },
-      saturday: {
-        breakfast: [
+      "saturday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1668,9 +1661,9 @@ const menu = {
           "Aloo masala",
           "Sambar & Chutney",
           "Mx frt Jam",
-          "B.egg",
+          "B.egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal Makhani",
           "Chapathi",
@@ -1679,22 +1672,22 @@ const menu = {
           "Curd",
           "Papad",
           "Salad",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Phulka",
           "Tava mix veg dry",
           "Palak dal",
           "Papd",
           "Salad",
-          "Banana + Bourn vita",
-        ],
-      },
+          "Banana + Bourn vita"
+        ]
+      }
     },
-    week4: {
-      sunday: {
-        breakfast: [
+    "week4": {
+      "sunday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -1703,9 +1696,9 @@ const menu = {
           "Green Chutney & Sauce",
           "Boiled Black Chana Sprouts",
           "Pineapple Jam",
-          "Boiled Egg",
+          "Boiled Egg"
         ],
-        lunch: [
+        "lunch": [
           "Kasmiri Pulao",
           "Phulka",
           "Dal Fry",
@@ -1714,9 +1707,9 @@ const menu = {
           "Mixed veg Raita",
           "Fryums",
           "Mixed Salad",
-          "Mixed Veg Pickle",
+          "Mixed Veg Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Chappathi",
           "Bhindi fry",
@@ -1724,11 +1717,11 @@ const menu = {
           "Masala Pappad",
           "Salad",
           "Mango Pickle",
-          "Seasonal Fruit",
-        ],
+          "Seasonal Fruit"
+        ]
       },
-      monday: {
-        breakfast: [
+      "monday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1736,9 +1729,9 @@ const menu = {
           "Tomato chutney",
           "Green Mong Sprouts",
           "Mango Jam",
-          "B.egg",
+          "B.egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal palak",
           "Phulka",
@@ -1747,9 +1740,9 @@ const menu = {
           "Curd",
           "papad",
           "Salad",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "rice",
           "Phulka",
           "Mix veg Phuket",
@@ -1757,11 +1750,11 @@ const menu = {
           "Fryums",
           "Salad",
           "Mix veg Pickle",
-          "Banana",
-        ],
+          "Banana"
+        ]
       },
-      tuesday: {
-        breakfast: [
+      "tuesday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1770,9 +1763,9 @@ const menu = {
           "Jalebi",
           "Tamrind Chutney",
           "Mx-Frt Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Dal Makhani",
           "Phulka",
@@ -1781,9 +1774,9 @@ const menu = {
           "Lassi",
           "Fryums",
           "Salad",
-          "Pickle",
+          "Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Phulka",
           "Mutter Paneer",
@@ -1791,11 +1784,11 @@ const menu = {
           "Papad",
           "Salad",
           "Pickle",
-          "Carrot Halwa",
-        ],
+          "Carrot Halwa"
+        ]
       },
-      wednesday: {
-        breakfast: [
+      "wednesday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "oatmeal",
@@ -1803,9 +1796,9 @@ const menu = {
           "Maggi dry",
           "white chana chaat",
           "strawberry Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Peas Pulao",
           "Chappathi",
           "Dal Panchranga",
@@ -1814,9 +1807,9 @@ const menu = {
           "Curd",
           "Masla Pappad",
           "salad",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Aloo paratha",
           "Green chutney&curd",
@@ -1824,11 +1817,11 @@ const menu = {
           "Papad",
           "salad",
           "Lemon Pickle",
-          "Musk Melon",
-        ],
+          "Musk Melon"
+        ]
       },
-      thursday: {
-        breakfast: [
+      "thursday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Cornflakes",
@@ -1836,9 +1829,9 @@ const menu = {
           "Lemon and Onion",
           "Pav Bhaji",
           "Pineapple Jam",
-          "Boiled egg",
+          "Boiled egg"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Mixed dal",
           "Pulka",
@@ -1847,9 +1840,9 @@ const menu = {
           "Curd",
           "Fryums",
           "Mixed salad",
-          "Mixed Veg pickle",
+          "Mixed Veg pickle"
         ],
-        dinner: [
+        "dinner": [
           "Ghee Rice",
           "Phulka",
           "Moong Dal",
@@ -1857,11 +1850,11 @@ const menu = {
           "Fryums",
           "Salad",
           "Mix veg pickle",
-          "Papaya",
-        ],
+          "Papaya"
+        ]
       },
-      friday: {
-        breakfast: [
+      "friday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Oatmeal",
@@ -1869,9 +1862,9 @@ const menu = {
           "Semiya Upma",
           "Boiled Moong sprout",
           "Mango Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Moong Dal",
           "Phulka",
@@ -1880,9 +1873,9 @@ const menu = {
           "Curd",
           "Papad",
           "Salad",
-          "Lemon Pickle",
+          "Lemon Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Rice",
           "Raw Banana Karamani",
           "Phulka",
@@ -1890,11 +1883,11 @@ const menu = {
           "Masala Papad",
           "Salad",
           "Water melon",
-          "Mango Pickle",
-        ],
+          "Mango Pickle"
+        ]
       },
-      saturday: {
-        breakfast: [
+      "saturday": {
+        "breakfast": [
           "Brown & White Bread ",
           "Tea, Coffee, Milk",
           "Corn Flakes",
@@ -1903,9 +1896,9 @@ const menu = {
           "Chole",
 
           "Mx frt Jam",
-          "Omlet",
+          "Omlet"
         ],
-        lunch: [
+        "lunch": [
           "Rice",
           "Moong Dal Khichdi",
           "Chapathi",
@@ -1914,9 +1907,9 @@ const menu = {
           "Curd",
           "Papad",
           "Salad",
-          "Mango Pickle",
+          "Mango Pickle"
         ],
-        dinner: [
+        "dinner": [
           "Jeera Rice",
           "Chappathi",
           "Tava mix veg dry",
@@ -1924,118 +1917,9 @@ const menu = {
           "Papad",
           "Salad",
           "Lemon Pickle",
-          "Banana + Boost",
-        ],
-      },
-    },
-  },
-};
-
-export default function Home({
-  displayDate,
-  weekNo,
-  day,
-}: {
-  displayDate: string;
-  weekNo: number;
-  day: string;
-}) {
-  return (
-    <div className="mt-8">
-      <Head>
-        <title>IIT-M-ESS</title>
-        <meta
-          name="description"
-          content="The one-line answer to the qn 'food entha myre'"
-        />
-      </Head>
-
-      <div className="ml-auto gap-4">
-        <p className="text-center text-4xl font-semibold tracking-tight ">
-          IIT<span className="text-sky-400">M</span>ESS
-        </p>
-      </div>
-      <div className="flex justify-evenly py-2">
-        <div className="flex items-center gap-2">
-          <Badge variant="outline">{displayDate}</Badge>
-          <Badge>Week {weekNo}</Badge>
-        </div>
-        <div className="flex items-center gap-2">
-          <Subscribe />
-          <ThemeToggle />
-        </div>
-      </div>
-
-      <div className="space-y-8">
-        {Object.keys(menu)?.map((item) => (
-          <div key={item}>
-            <p className="text-xl text-center text-orange-400 font-semibold">
-              <span className="capitalize">{item.split("mess")[0]}</span> Mess
-            </p>
-
-            {/* @ts-ignore */}
-            <Menu data={menu[item]} weekNo={weekNo} day={day} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export async function getServerSideProps() {
-  const incrementWeek = (weekNo: number, diffInWeeks: number) => {
-    weekNo = (weekNo + diffInWeeks) % 4;
-    if (weekNo == 0) return 4;
-    return weekNo;
-  };
-  const startDate = "2022-05-01";
-  var date = new Date();
-  //adding 5:30 to gmt
-  date.setHours(date.getHours() + 5.5);
-
-  let today = date.toISOString().slice(0, 10);
-
-  const dateSplit = today.split("-");
-  const displayDate = dateSplit[2] + "-" + dateSplit[1] + "-" + dateSplit[0];
-
-  let day;
-
-  switch (date.getDay()) {
-    case 0:
-      day = "sunday";
-      break;
-    case 1:
-      day = "monday";
-      break;
-    case 2:
-      day = "tuesday";
-      break;
-    case 3:
-      day = "wednesday";
-      break;
-    case 4:
-      day = "thursday";
-      break;
-    case 5:
-      day = "friday";
-      break;
-    case 6:
-      day = "saturday";
+          "Banana + Boost"
+        ]
+      }
+    }
   }
-
-  let weekNo = 2;
-  /* @ts-ignore */
-  const diffInMs = new Date(today) - new Date(startDate);
-  const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
-  /* @ts-ignore */
-  const diffInWeeks = parseInt(diffInDays / 7);
-  weekNo = incrementWeek(weekNo, diffInWeeks);
-
-  return {
-    props: {
-      displayDate,
-      weekNo,
-      day,
-    },
-  };
 }
